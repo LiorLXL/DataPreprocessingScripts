@@ -9,10 +9,10 @@ import math
 import tempfile
 
 # 配置路径
-input_path = "/server02_data/_RAWDATA/PET_CT/FuJianShengLi/图像2"  # 请替换为您的输入路径
-output_path = "/server02_data/_RAWDATA/PET_CT/FuJianShengLi/img2_nii"  # 请替换为您的输出路径
+input_path = "/aaa/bbb/ccc/图像1"  # 请替换为您的输入路径
+output_path = "/aaa/bbb/ccc/img1_nii"  # 请替换为您的输出路径
 
-# 定义序列名映射
+# 定义序列名映射 要转换的序列名
 sequence_mapping = {
     "WB Stand": "WB_Stand",
     "WB 3D MAC": "WB_3D_MAC",
@@ -21,7 +21,7 @@ sequence_mapping = {
     "+sl": "WB_3D_MAC_2"
 }
 
-# PET序列关键词
+# PET序列关键词 标识序列为PET的字符串
 suv_keywords = ["MAC", "+sl"]
 
 
@@ -311,5 +311,6 @@ if __name__ == "__main__":
     # 使用8个进程处理
     with Pool(8) as p:
         p.map(process_patient, patient_dirs)
+
 
     print("所有处理完成!")
