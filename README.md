@@ -7,4 +7,6 @@ Some useful data preprocessing scripts
 
  ***petct_d2n_finaledition.py***:在所有的数据中查找有使用PSMA显像剂的病人并且在使用PSMA检查的所有序列前加上PSMA标识，此外，该脚本还可以处理非不同显像剂序列同名的问题，若序列同名，保存SeriesNumber较大的序列。
 
+ ***fjsl_d2n2***:该脚本为将DICOM图像数据集转换为nii.gz格式并且处理其中PET序列的SUV值，DICOM图像数据集要符合不同病人文件夹中的序列命名是相同的
+
 脚本可直接运行，只需更改其中的data_root,output_root等路径
